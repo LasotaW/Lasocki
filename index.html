@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <link rel="stylesheet" type="text/css" href="style.css"/>
+        <link rel="stylesheet" type="text/css" href="css/fontello.css" />
+        <title>Wiktor Lasota portfolio</title>
+    </head>
+    <body>
+        <p onmouseenter="openNav()" id="open">Menu<i id="openbtn"></i></p>
+        <nav onmouseleave="closeNav() "id="menu">
+            <a href="#start" class="menu-link">Start</a>
+            <a href="#about" class="menu-link">About</a>
+            <a href="#skills" class="menu-link">Skills</a>
+            <a href="#projects" class="menu-link">Projects</a>
+            <a href="#contact" class="menu-link">Contact</a>
+        </nav>
+        <header id="start">
+            <section>
+                <h1 id="welcome-text">
+                    <div class="animated-div" id="hi">Hi!</div> 
+                    <div class="animated-div">
+                        <span id="animated-text">Nice to see you here. Come closer!</span>
+                    </div>
+                </h1>
+            </section>
+            <div id="button-container">
+                <a href="#about">
+                    <button>
+                        <p id="welcome-button">Press to "come closer" </p>
+                    </button>
+                </a>
+            </div>
+        </header>
+        <section id ="about">
+            <div id="about-container">
+                <img src="img/lasocki.jpg" id="about-photo"/>
+                <p id="about-text">
+                    I'm Wiktor Lasota. I work with websites. That's my passion which feeds up my creativity.
+                    I want to do the best. I work hard to make my clients happy and distribute them proffesional job.
+                </p>
+            </div>
+            <section id="skills">
+                <h1 id="skills-header">My knowledge</h1>
+                <div class="skill-tile">
+                    <div>
+                        <h3 class="skill-name">HTML5</h3>
+                    </div>
+                    <div class="rating">
+                        <i class="icon-star"></i>
+                        <i class="icon-star"></i>
+                        <i class="icon-star"></i>
+                        <i class="icon-star"></i>
+                        <i class="icon-star-empty"></i>
+                    </div>
+                </div>
+                <div class="skill-tile">
+                    <div>
+                        <h3 class="skill-name">CSS3</h3>
+                    </div>
+                    <div class="rating">
+                        <i class="icon-star"></i>
+                        <i class="icon-star"></i>
+                        <i class="icon-star"></i>
+                        <i class="icon-star-half-alt"></i>
+                        <i class="icon-star-empty"></i>
+                    </div>
+                </div>
+                <div class="skill-tile">
+                    <div>
+                        <h3 class="skill-name">JavaScript</h3>
+                    </div>
+                    <div class="rating">
+                        <i class="icon-star"></i>
+                        <i class="icon-star"></i>
+                        <i class="icon-star-empty"></i>
+                        <i class="icon-star-empty"></i>
+                        <i class="icon-star-empty"></i>
+                    </div>
+                </div>
+            </section>
+            <section id="projects">
+                <div>
+                    <h1 id="projects-header">Here is some of my jobs</h1>
+                </div>
+                <div class="project">
+                    <h3 class="project-title"></h3>
+                    
+                </div>
+                <div class="project">
+                    <h3 class="project-title"></h3>
+                    
+                </div>
+                <div class="project">
+                    <h3 class="project-title"></h3> 
+                    
+                </div>
+                <div class="project">
+                    <h3 class="project-title"></h3>
+                    
+                </div>
+            </section>
+        </section>
+        <section id ="contact">
+            <h1 id="contact-header">Contact me</h1>
+            <form id="contact-form">
+                <input class="col-form contact-form" placeholder="Name"/>
+                <input class="col-form contact-form" placeholder="Second name"/>
+                <input class="col-form contact-form" placeholder="E-mail"/>
+                <input class="message-form contact-form" placeholder="Message"/>
+            </form>
+        </section>
+        <footer>
+            Copyright 2019 &copy; Wiktor Lasota
+        </footer>
+        
+        <script>
+            function openNav(){
+                document.getElementById("menu").style.width="100%";
+                document.getElementById("menu").style.padding="25px";
+                document.getElementById("open").style.opacity="0";
+            }
+            
+            function closeNav(){
+                document.getElementById("menu").style.width="0%";
+                 document.getElementById("menu").style.padding="0";
+                document.getElementById("open").style.opacity="1";
+            }
+        </script>
+        <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        })
+        </script>
+    </body>
+</html>
